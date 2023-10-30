@@ -1,6 +1,9 @@
 # TODO Напишите функцию для поиска индекса товара
 def find_index_of_element(list_, element):
-    return list_.index(element) if element in list_ else None
+    for i, list_element in enumerate(list_):
+        if list_element == element:
+            return i
+    return None
 
 
 items_list = ['яблоко', 'банан', 'апельсин', 'груша', 'киви', 'банан']
